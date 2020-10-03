@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "QFrame"
 #include "QStackedWidget"
+#include "mainwidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,8 +21,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    MainWidget mainwidget;
 
     QFrame *main_frame;
-    QStackedWidget *main_widget;
+    QStackedWidget *key_widget;
+
+    void initialize_main_window();
+    void initialize_connections();
+
 };
 #endif // MAINWINDOW_H

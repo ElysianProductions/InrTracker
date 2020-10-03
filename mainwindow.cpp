@@ -7,9 +7,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     main_frame = new QFrame(this);
-    main_widget = new QStackedWidget();
-
-
+    key_widget = new QStackedWidget();
+    key_widget->addWidget(mainwidget.initialize_widget());
+    initialize_main_window();
 
 
 
@@ -21,3 +21,13 @@ MainWindow::~MainWindow()
 }
 
 
+void MainWindow::initialize_main_window()
+{
+    setCentralWidget(key_widget);
+}
+
+
+void MainWindow::initialize_connections()
+{
+
+}
