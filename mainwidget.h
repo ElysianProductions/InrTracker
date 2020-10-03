@@ -10,6 +10,7 @@
 #include "QStackedWidget"
 #include "QWidget"
 
+
 class MainWidget : public QWidget
 {
     Q_OBJECT
@@ -25,8 +26,10 @@ public:
 
 private:
 
-    QWidget *primary_display;
-    QWidget* create_widget(QPushButton *button_one, QPushButton *button_two);
+    //QWidget *primary_widget;
+    QVBoxLayout *primary_layout;
+    QWidget* create_widget(QPushButton *button_one, QPushButton *button_two, QVBoxLayout *layout);
+
 
 };
 
